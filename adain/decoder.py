@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import tensorflow as tf
-import keras
 
 from adain import USE_TF_KERAS
 from adain.layers import PostPreprocess, SpatialReflectionPadding, AdaIN
@@ -14,6 +13,7 @@ if USE_TF_KERAS:
     UpSampling2D = tf.keras.layers.UpSampling2D
     Layer = tf.keras.layers.Layer
 else:
+    import keras
     Input = keras.layers.Input
     Conv2D = keras.layers.Conv2D
     Model = keras.models.Model

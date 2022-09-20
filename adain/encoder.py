@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 import tensorflow as tf
-import keras
 
 from adain import USE_TF_KERAS
 from adain.layers import VggPreprocess, SpatialReflectionPadding
@@ -16,6 +15,7 @@ if USE_TF_KERAS:
     Layer = tf.keras.layers.Layer
     Model = tf.keras.models.Model
 else:
+    import keras
     Input = keras.layers.Input
     Conv2D = keras.layers.Conv2D
     DepthwiseConv2D = keras.layers.DepthwiseConv2D

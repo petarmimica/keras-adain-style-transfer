@@ -4,6 +4,7 @@ import numpy as np
 import cv2
 from typing import Tuple
 
+# Credit: https://gist.github.com/IdeaKing/11cf5e146d23c5bb219ba3508cca89ec
 def resize_with_pad(image: np.array,
                     new_shape: Tuple[int, int],
                     padding_color: Tuple[int] = (255, 255, 255)) -> np.array:
